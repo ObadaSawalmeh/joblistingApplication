@@ -8,13 +8,14 @@ function renderData(data) {
 
   data.forEach(jobListing => {
     const featuredHtml = jobListing.featured ? `<div class="details--featured">Featured</div>` : '';
-    const highlightHtml = jobListing.featured ? `<div class="details--highlight"></div>` : '';
     const newHtml = jobListing.new ? `<div class="details--new">New!</div>` : '';
-
+    
     const listing = document.createElement('div');
     listing.classList.add('job--listing');
+    const highlightHtml = jobListing.featured ?     listing.classList.add('featured'): '';
+
     listing.innerHTML = `
-        <div class="job--listing__logo">
+      <div class="job--listing__logo">
         <img src=".${jobListing.logo}" alt="logo">
       </div>
       <div class="job--listing__details">
@@ -24,7 +25,6 @@ function renderData(data) {
           </div>
           ${newHtml}
           ${featuredHtml}
-          ${highlightHtml}
         </div>
         <div class="row">
           <div class="details--position">
