@@ -56,7 +56,7 @@ body {
     top: -40px;
     width: 80%;
     max-width: 1000px;
-    height: 82px;
+    height: 62px;
     margin: 0 auto;
     padding: 0rem 1rem;
     display: flex;
@@ -68,6 +68,7 @@ body {
     gap: 1rem;
     display: none;
 }
+
 
 .filters .filters--removal {
     color: var(--secondary-clr);
